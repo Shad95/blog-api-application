@@ -1,8 +1,13 @@
 package com.blog.payload;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+
+import com.blog.entities.Role;
 
 public class UserDto {
 
@@ -57,4 +62,15 @@ public class UserDto {
 	public void setAbout(String about) {
 		this.about = about;
 	}
+	
+	private Set<RoleDto> roles = new HashSet<>();
+
+	public Set<RoleDto> getRoles() {
+		return roles;
+	}
+	public void setRoles(Set<RoleDto> roles) {
+		this.roles = roles;
+	}
+
+	
 }

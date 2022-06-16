@@ -108,5 +108,17 @@ public class User implements UserDetails{
 	public boolean isEnabled() {
 		return true;
 	}
+	public List<Post> getPosts() {
+		return posts;
+	}
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+	public Set<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 }
